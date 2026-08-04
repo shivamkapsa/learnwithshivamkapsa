@@ -1,11 +1,6 @@
-type Props = {
-    title: string;
-    description: string;
-    duration: string;
-    lessons: number;
-    level: string;
-    free: boolean;
-  };
+import { Course } from "@/types/course";
+
+type Props = Course;
   
   export function CourseCard({
     title,
