@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function HeroButtons() {
   return (
-    <div className="mt-8 flex flex-wrap gap-4">
+    <div className="mt-10 flex flex-wrap gap-4">
       <Button size="lg">
         {heroContent.primaryButton}
       </Button>

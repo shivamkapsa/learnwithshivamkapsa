@@ -12,15 +12,18 @@ export function Hero() {
         <div className="grid w-full gap-16 lg:grid-cols-2">
           <div>
             <div>
-            <Badge className="mb-6">
-  {heroContent.badge}
-</Badge>
+              <Badge className="mb-6">{heroContent.badge}</Badge>
 
-              <h1 className="text-5xl font-bold leading-tight">
-                {heroContent.title}
+              <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+                Become the{" "}
+                <span className="bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
+                  Developer
+                </span>
+                <br />
+                Companies Want to Hire.
               </h1>
 
-              <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
                 {heroContent.description}
               </p>
 
