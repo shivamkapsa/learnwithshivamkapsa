@@ -3,6 +3,7 @@ import { HeroStats } from "./HeroStats";
 import { CodePreview } from "./CodePreview";
 import { heroContent } from "@/content/home/hero";
 import { Container } from "@/components/shared/Container";
+import { Badge } from "@/components/ui/Badge";
 
 export function Hero() {
   return (
@@ -11,9 +12,9 @@ export function Hero() {
         <div className="grid w-full gap-16 lg:grid-cols-2">
           <div>
             <div>
-              <p className="mb-4 text-amber-500 font-semibold">
-                {heroContent.badge}
-              </p>
+            <Badge className="mb-6">
+  {heroContent.badge}
+</Badge>
 
               <h1 className="text-5xl font-bold leading-tight">
                 {heroContent.title}
