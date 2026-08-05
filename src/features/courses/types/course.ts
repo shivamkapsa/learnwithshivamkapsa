@@ -17,5 +17,7 @@ export interface Course {
     thumbnail: string;
   
     technologies: string[];
+    
+    curriculum: string[];
   
   }

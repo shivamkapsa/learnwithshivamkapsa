@@ -1,0 +1,15 @@
+export const htmlCurriculum = [
+    "Introduction",
+    "VS Code Setup",
+    "HTML Structure",
+    "Head Tag",
+    "Body Tag",
+    "Text Formatting",
+    "Lists",
+    "Tables",
+    "Forms",
+    "Semantic HTML",
+    "Audio & Video",
+    "Project 1",
+    "Interview Questions",
+  ];

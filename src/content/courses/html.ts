@@ -1,4 +1,5 @@
 import { Course } from "@/features/courses/types/course";
+import { htmlCurriculum } from "./curriculum/html";
 
 export const htmlCourse: Course = {
   id: 1,
@@ -19,4 +20,6 @@ export const htmlCourse: Course = {
   thumbnail: "/images/courses/html.png",
 
   technologies: ["HTML5"],
+
+curriculum: htmlCurriculum,
 };

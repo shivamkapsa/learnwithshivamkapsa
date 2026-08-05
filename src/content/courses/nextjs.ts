@@ -10,4 +10,5 @@ export const nextjsCourse: Course = {
   lessons: 72,
   thumbnail: "/images/courses/nextjs.png",
   technologies: ["Next.js"],
+  curriculum: [],
 };

@@ -19,4 +19,5 @@ export const cssCourse: Course = {
   thumbnail: "/images/courses/css.png",
 
   technologies: ["CSS3"],
+  curriculum: [],
 };

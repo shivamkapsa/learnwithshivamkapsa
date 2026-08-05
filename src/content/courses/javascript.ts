@@ -10,4 +10,5 @@ export const javascriptCourse: Course = {
   lessons: 65,
   thumbnail: "/images/courses/javascript.png",
   technologies: ["JavaScript"],
+  curriculum: [],
 };

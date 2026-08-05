@@ -10,4 +10,5 @@ export const nodeCourse: Course = {
   lessons: 70,
   thumbnail: "/images/courses/node.png",
   technologies: ["Node.js"],
+  curriculum: [],
 };

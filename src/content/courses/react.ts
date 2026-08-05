@@ -10,4 +10,5 @@ export const reactCourse: Course = {
   lessons: 90,
   thumbnail: "/images/courses/react.png",
   technologies: ["React"],
+  curriculum: [],
 };
