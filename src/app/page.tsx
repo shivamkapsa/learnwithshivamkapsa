@@ -5,6 +5,7 @@ import { LearningPaths } from "@/features/home/components/LearningPaths";
 import { LatestNotes } from "@/features/home/components/LatestNotes";
 import { LatestVideos } from "@/features/home/components/LatestVideos";
 import { FeaturedProjects } from "@/features/home/components/FeaturedProjects";
+import { Resources } from "@/features/home/components/Resources";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <LatestNotes />
       <LatestVideos />
       <FeaturedProjects />
+      <Resources />
       
     </>
   );
