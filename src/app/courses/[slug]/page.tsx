@@ -1,6 +1,14 @@
 import { notFound } from "next/navigation";
 
+import { Container } from "@/components/shared/Container";
+
 import { getCourseBySlug } from "@/features/courses/utils";
+
+import { CourseHero } from "@/features/courses/components/CourseHero";
+
+import { CourseStats } from "@/features/courses/components/CourseStats";
+import { CourseTechnologies } from "@/features/courses/components/CourseTechnologies";
+import { CourseCurriculum } from "@/features/courses/components/CourseCurriculum";
 
 type Props = {
   params: Promise<{
@@ -20,14 +28,20 @@ export default async function CoursePage({
   }
 
   return (
-    <main className="py-20">
-      <h1 className="text-center text-5xl font-bold">
-        {course.title}
-      </h1>
+    <main>
+      <CourseHero course={course} />
 
-      <p className="mt-6 text-center text-muted-foreground">
-        {course.description}
-      </p>
+      <Container>
+        <CourseStats course={course} />
+
+        <CourseTechnologies
+          technologies={course.technologies}
+        />
+
+        <CourseCurriculum
+          curriculum={course.curriculum}
+        />
+      </Container>
     </main>
   );
 }
