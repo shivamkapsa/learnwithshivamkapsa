@@ -1,7 +1,7 @@
 export const aboutPreview = {
     badge: "ABOUT",
   
-    title: "Hi, I'm Shivam Mishra 👋",
+    title: "Hi, I'm Shivam Kapsa 👋",
   
     description:
       "I'm a Software Engineer, Educator and Content Creator helping developers learn programming through structured courses, practical projects and interview-focused content.",
