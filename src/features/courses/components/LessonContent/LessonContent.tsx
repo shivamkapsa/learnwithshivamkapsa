@@ -1,15 +1,17 @@
 type Props = {
-    content: string;
-  };
-  
-  export function LessonContent({
-    content,
-  }: Props) {
-    return (
-      <section className="prose prose-invert mt-12 max-w-none">
-        <pre className="whitespace-pre-wrap font-sans">
+  content: string;
+};
+
+export function LessonContent({
+  content,
+}: Props) {
+  return (
+    <article className="mt-12 rounded-2xl border border-border bg-card p-8">
+      <div className="prose prose-invert max-w-none">
+        <pre className="whitespace-pre-wrap font-sans leading-8">
           {content}
         </pre>
-      </section>
-    );
-  }
+      </div>
+    </article>
+  );
+}

@@ -8,6 +8,7 @@ import { LessonHero } from "@/features/courses/components/LessonHero";
 import { LessonContent } from "@/features/courses/components/LessonContent";
 import { LessonNavigation } from "@/features/courses/components/LessonNavigation";
 import { getLessonNavigation } from "@/features/courses/utils";
+import { LessonSidebar } from "@/features/courses/components/LessonSidebar";
 
 type Props = {
   params: Promise<{
@@ -29,7 +30,7 @@ export default async function LessonPage({ params }: Props) {
   return (
     <main className="py-20">
       <Container>
-        <LessonHero
+        {/* <LessonHero
           courseTitle="HTML"
           courseSlug="html"
           title={data.title}
@@ -40,7 +41,41 @@ export default async function LessonPage({ params }: Props) {
         <LessonNavigation
           previous={navigation.previous ?? undefined}
           next={navigation.next ?? undefined}
-        />
+        /> */}
+        <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
+
+<LessonSidebar
+  lessons={[
+    "Introduction",
+    "HTML Elements",
+    "Forms",
+    "Tables",
+    "Semantic HTML",
+  ]}
+  currentLesson={data.title}
+/>
+
+<div>
+
+  <LessonHero
+    courseTitle="HTML"
+    courseSlug="html"
+    title={data.title}
+    duration={data.duration}
+  />
+
+  <LessonContent
+    content={data.content}
+  />
+
+  <LessonNavigation
+    previous={navigation.previous ?? undefined}
+    next={navigation.next ?? undefined}
+  />
+
+</div>
+
+</div>
       </Container>
     </main>
   );
