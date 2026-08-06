@@ -1,6 +1,12 @@
 import { notFound } from "next/navigation";
 
+import { Container } from "@/components/shared/Container";
+
 import { getLessonBySlug } from "@/features/courses/utils";
+
+import { LessonHero } from "@/features/courses/components/LessonHero";
+import { LessonContent } from "@/features/courses/components/LessonContent";
+import { LessonNavigation } from "@/features/courses/components/LessonNavigation";
 
 type Props = {
   params: Promise<{
@@ -23,18 +29,29 @@ export default async function LessonPage({
   }
 
   return (
-    <main className="mx-auto max-w-4xl py-20">
-      <h1 className="text-5xl font-bold">
-        {data.title}
-      </h1>
-
-      <p className="mt-4">
-        {data.duration}
-      </p>
-
-      <pre className="mt-10 whitespace-pre-wrap">
-        {data.content}
-      </pre>
+    <main className="py-20">
+      <Container>
+        <LessonHero
+          courseTitle="HTML"
+          courseSlug="html"
+          title={data.title}
+          duration={data.duration}
+        />
+  
+        <LessonContent
+          content={data.content}
+        />
+        <LessonNavigation
+  previous={{
+    title: "Course Overview",
+    href: "/courses/html",
+  }}
+  next={{
+    title: "HTML Elements",
+    href: "/courses/html/html-elements",
+  }}
+/>
+      </Container>
     </main>
   );
 }
