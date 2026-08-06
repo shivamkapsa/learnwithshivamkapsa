@@ -78,9 +78,10 @@ export default async function CoursePage({
           technologies={courseData.technologies}
         />
 
-        <CourseCurriculum
-          curriculum={courseData.curriculum}
-        />
+<CourseCurriculum
+  courseSlug={courseData.slug}
+  curriculum={courseData.curriculum}
+/>
       </Container>
     </main>
   );
