@@ -17,7 +17,7 @@ export const navigation = [
     },
     {
       title: "Blog",
-      href: "/blog",
+      href: "/blogs",
     },
     {
       title: "Resources",

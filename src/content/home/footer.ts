@@ -6,7 +6,7 @@ export const footer = {
       { title: "Courses", href: "/courses" },
       { title: "Notes", href: "/notes" },
       { title: "Projects", href: "/projects" },
-      { title: "Blog", href: "/blog" },
+      { title: "Blog", href: "/blogs" },
     ],
   
     resources: [

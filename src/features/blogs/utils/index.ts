@@ -1,0 +1,1 @@
+export { getBlogBySlug } from "./getBlogBySlug";
