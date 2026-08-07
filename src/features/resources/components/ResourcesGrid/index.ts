@@ -1,0 +1,1 @@
+export { ResourcesGrid } from "./ResourcesGrid";

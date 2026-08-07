@@ -1,9 +1,11 @@
+import { ResourcesGrid } from "@/features/resources/components/ResourcesGrid";
+import { ResourcesPageHero } from "@/features/resources/components/ResourcesPageHero";
+
 export default function ResourcesPage() {
-    return (
-      <main className="py-20">
-        <h1 className="text-center text-5xl font-bold">
-          Resources Page
-        </h1>
-      </main>
-    );
-  }
+  return (
+    <main>
+      <ResourcesPageHero />
+      <ResourcesGrid />
+    </main>
+  );
+}
