@@ -17,7 +17,7 @@ export const searchIndex: SearchItem[] = [
 
   ...allNotes.map((note) => ({
     id: `note-${note.slug}`,
-    type: "course" as const,
+    type: "note" as const,
     title: note.title,
     description: note.description,
     href: `/notes/${note.slug}`,
@@ -26,7 +26,7 @@ export const searchIndex: SearchItem[] = [
 
   ...allResources.map((resource) => ({
     id: `resource-${resource.slug}`,
-    type: "course" as const,
+    type: "resource" as const,
     title: resource.title,
     description: resource.description,
     href: `/resources/${resource.slug}`,
@@ -35,7 +35,7 @@ export const searchIndex: SearchItem[] = [
 
   ...allBlogs.map((blog) => ({
     id: `blog-${blog.slug}`,
-    type: "course" as const,
+    type: "blog" as const,
     title: blog.title,
     description: blog.description,
     href: `/blogs/${blog.slug}`,

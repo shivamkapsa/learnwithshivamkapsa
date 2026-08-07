@@ -2,6 +2,8 @@ import { Logo } from "@/components/shared/Logo";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { NavbarActions } from "./NavbarActions";
 import { MobileNavigation } from "./MobileNavigation";
+// import { Search } from "@/features/search/components/Search";
+import { Search } from "@/features/search/components/Search/Search";
 
 export function Navbar() {
   return (
@@ -11,9 +13,11 @@ export function Navbar() {
 
         <DesktopNavigation />
 
-        <NavbarActions />
+<Search />
 
-        <MobileNavigation />
+<NavbarActions />
+
+<MobileNavigation />
       </div>
     </header>
   );
