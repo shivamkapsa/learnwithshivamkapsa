@@ -23,7 +23,9 @@ export function SearchDialog({
   onQueryChange,
   results,
 }: SearchDialogProps) {
-  if (!open) return null;
+  if (!open) {
+    return null;
+  }
 
   return (
     <>
@@ -38,7 +40,10 @@ export function SearchDialog({
 
           <button
             type="button"
-            onClick={onClose}
+            onClick={() => {
+              onQueryChange("");
+              onClose();
+            }}
             aria-label="Close search"
             className="rounded-md p-2 hover:bg-muted"
           >
@@ -47,7 +52,7 @@ export function SearchDialog({
         </div>
 
         <div className="p-4">
-          <SearchInput value={query} onChange={onQueryChange} />
+          <SearchInput value={query} onChange={onQueryChange}  />
 
           <SearchResults results={results} onSelect={onClose} />
         </div>
