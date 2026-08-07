@@ -1,20 +1,24 @@
 import Link from "next/link";
 
+import { socialLinks } from "@/config/social";
+
 export function NavbarActions() {
   return (
-    <div className="hidden items-center gap-3 lg:flex">
+    <div className="hidden items-center gap-1 xl:flex">
       <Link
-        href="https://github.com/shivamkapsa"
+        href={socialLinks.github}
         target="_blank"
-        className="text-sm text-muted-foreground hover:text-foreground"
+        rel="noopener noreferrer"
+        className="rounded-md px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         GitHub
       </Link>
 
       <Link
-        href="https://youtube.com/@namasteshivam"
+        href={socialLinks.youtube}
         target="_blank"
-        className="text-sm text-muted-foreground hover:text-foreground"
+        rel="noopener noreferrer"
+        className="rounded-md px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         YouTube
       </Link>
