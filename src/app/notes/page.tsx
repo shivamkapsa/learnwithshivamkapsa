@@ -1,9 +1,12 @@
+import { NotesPageHero } from "@/features/notes/components/NotesPageHero";
+import { NotesGrid } from "@/features/notes/components/NotesGrid";
+
 export default function NotesPage() {
-    return (
-      <main className="py-20">
-        <h1 className="text-center text-5xl font-bold">
-          Notes Page
-        </h1>
-      </main>
-    );
-  }
+  return (
+    <main>
+      <NotesPageHero />
+
+      <NotesGrid />
+    </main>
+  );
+}
