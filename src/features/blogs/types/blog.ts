@@ -7,4 +7,5 @@ export interface Blog {
   category: string;
   tags: string[];
   readingTime: string;
+  publishedAt: string;
 }

@@ -28,4 +28,5 @@ Show useful loading states for asynchronous work, avoid blocking the main thread
   category: "React",
   tags: ["React", "Performance", "Frontend"],
   readingTime: "6 min",
+  publishedAt: "2026-07-15",
 };
