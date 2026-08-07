@@ -8,20 +8,5 @@ export const heroContent = {
   
     primaryButton: "Start Learning",
   
-    secondaryButton: "Watch YouTube",
-  
-    stats: [
-      {
-        value: "4+",
-        label: "Years Experience",
-      },
-      {
-        value: "200+",
-        label: "Videos",
-      },
-      {
-        value: "500+",
-        label: "Notes",
-      },
-    ],
+    secondaryButton: "Watch Videos",
   };
