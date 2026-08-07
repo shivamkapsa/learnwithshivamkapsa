@@ -1,6 +1,6 @@
-import { Course } from "@/types/course";
+import type { FeaturedCourse } from "@/content/home/courses";
 
-type Props = Course;
+type Props = FeaturedCourse;
   
   export function CourseCard({
     title,

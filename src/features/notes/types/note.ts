@@ -6,6 +6,8 @@ export interface Note {
     title: string;
   
     description: string;
+
+    content: string;
   
     category: string;
   

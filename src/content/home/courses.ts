@@ -1,6 +1,13 @@
-import { Course } from "@/types/course";
+import type { Course } from "@/features/courses/types/course";
 
-export const featuredCourses: Course[] = [
+export type FeaturedCourse = Pick<
+  Course,
+  "id" | "slug" | "title" | "description" | "level" | "lessons" | "duration"
+> & {
+  free: boolean;
+};
+
+export const featuredCourses: FeaturedCourse[] = [
   {
     id: 1,
     slug: "react-js",
@@ -11,8 +18,6 @@ export const featuredCourses: Course[] = [
     lessons: 52,
     duration: "18 Hours",
     free: true,
-    tags: ["React", "Hooks", "Projects"],
-    image: "/images/react-course.png",
   },
 
   {
@@ -25,8 +30,6 @@ export const featuredCourses: Course[] = [
     lessons: 40,
     duration: "14 Hours",
     free: true,
-    tags: ["Next.js", "SSR", "SEO"],
-    image: "/images/next-course.png",
   },
 
   {
@@ -39,7 +42,5 @@ export const featuredCourses: Course[] = [
     lessons: 80,
     duration: "22 Hours",
     free: false,
-    tags: ["JavaScript", "Interview"],
-    image: "/images/javascript-course.png",
   },
 ];
