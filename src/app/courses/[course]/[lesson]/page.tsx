@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Container } from "@/components/shared/Container";
@@ -16,6 +17,33 @@ type Props = {
     lesson: string;
   }>;
 };
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { lesson } = await params;
+
+  const data = getLessonBySlug(lesson);
+
+  if (!data) {
+    return {
+      title: "Lesson Not Found",
+    };
+  }
+
+  return {
+    title: data.title,
+    description: `Learn ${data.title} with Learn With Shivam Kapsa.`,
+    alternates: {
+      canonical: `/courses/html/${data.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: data.title,
+      description: `Learn ${data.title} with Learn With Shivam Kapsa.`,
+      url: `/courses/html/${data.slug}`,
+    },
+  };
+}
 
 export default async function LessonPage({ params }: Props) {
   const { lesson } = await params;

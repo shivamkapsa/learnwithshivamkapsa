@@ -4,6 +4,7 @@ import { allBlogs } from "@/content/blogs";
 import { allCourses } from "@/content/courses";
 import { allNotes } from "@/content/notes";
 import { allResources } from "@/content/resources";
+import { htmlLessons } from "@/content/courses/lessons/html";
 
 const baseUrl = "https://learnwithshivamkapsa.vercel.app";
 
@@ -80,6 +81,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
+  const lessonRoutes = htmlLessons.map((lesson) => ({
+    url: `${baseUrl}/courses/html/${lesson.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   return [
     ...staticRoutes,
@@ -87,5 +93,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...noteRoutes,
     ...blogRoutes,
     ...resourceRoutes,
+    ...lessonRoutes,
   ];
 }

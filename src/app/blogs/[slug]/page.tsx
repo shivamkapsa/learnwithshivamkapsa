@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Container } from "@/components/shared/Container";
@@ -10,6 +11,34 @@ type Props = {
     slug: string;
   }>;
 };
+
+
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
+
+  if (!blog) {
+    return {
+      title: "Blog Not Found",
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.description,
+    alternates: {
+      canonical: `/blogs/${blog.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: blog.title,
+      description: blog.description,
+      url: `/blogs/${blog.slug}`,
+    },
+  };
+}
 
 export default async function BlogPage({ params }: Props) {
   const { slug } = await params;
