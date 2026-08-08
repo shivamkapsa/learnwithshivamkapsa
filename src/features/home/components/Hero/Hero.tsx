@@ -26,7 +26,7 @@ export function Hero() {
         />
       </div>
       <div
-  className="
+        className="
     absolute
     inset-0
     -z-20
@@ -34,7 +34,7 @@ export function Hero() {
     [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
     [background-size:60px_60px]
   "
-/>
+      />
       <Container>
         <div className="grid w-full gap-24 lg:grid-cols-2">
           <div>
@@ -42,13 +42,13 @@ export function Hero() {
               <Badge className="mb-6">{heroContent.badge}</Badge>
 
               <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-                Become the{" "}
-                <span className="bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
-                  Developer
-                </span>
-                <br />
-                Companies Want to Hire.
-              </h1>
+  {heroContent.titlePrefix}{" "}
+  <span className="bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
+    {heroContent.titleHighlight}
+  </span>
+  <br />
+  {heroContent.titleSuffix}
+</h1>
 
               <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
                 {heroContent.description}

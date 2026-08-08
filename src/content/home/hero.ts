@@ -1,10 +1,14 @@
 export const heroContent = {
-    badge: "Learn Programming the Right Way",
+    badge: "Learn • Build • Prepare",
   
-    title: "Become the Developer Companies Want to Hire.",
+    titlePrefix: "Learn",
+
+    titleHighlight: "Computer Science",
+  
+    titleSuffix: "Build Skills Prepare for Your Future",
   
     description:
-      "Master React, Angular, JavaScript, Node.js, DSA and interview preparation through structured learning paths, real-world projects and practical notes.",
+      "Learn web development, Computer Science, interview skills and competitive exam concepts through structured courses, practical projects, notes, blogs and learning resources.",
   
     primaryButton: "Start Learning",
   
