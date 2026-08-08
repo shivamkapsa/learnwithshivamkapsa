@@ -18,13 +18,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://learnwithshivamkapsa.vercel.app"),
+
   title: {
     default: "Learn With Shivam Kapsa",
     template: "%s | Learn With Shivam Kapsa",
   },
 
   description:
-    "Learn React, Angular, JavaScript, Node.js and prepare for interviews with structured learning paths.",
+    "Learn web development, Computer Science, interview skills and exam preparation with structured courses, notes, blogs and practical resources.",
 
   applicationName: "LearnWithShivamKapsa",
 
@@ -33,6 +35,60 @@ export const metadata: Metadata = {
       name: "Shivam Kapsa",
     },
   ],
+
+  creator: "Shivam Kapsa",
+  publisher: "LearnWithShivamKapsa",
+
+  keywords: [
+    "web development",
+    "React",
+    "JavaScript",
+    "Next.js",
+    "Node.js",
+    "Angular",
+    "Computer Science",
+    "programming",
+    "interview preparation",
+    "government exam preparation",
+    "DSSSB",
+    "TGT Computer Science",
+    "CTET",
+    "UPTET",
+    "coding interview",
+  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://learnwithshivamkapsa.vercel.app",
+    siteName: "Learn With Shivam Kapsa",
+    title: "Learn With Shivam Kapsa",
+    description:
+      "Learn web development, Computer Science, interview skills and exam preparation with structured courses, notes, blogs and practical resources.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Learn With Shivam Kapsa",
+    description:
+      "Learn web development, Computer Science, interview skills and exam preparation with structured courses, notes, blogs and practical resources.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
